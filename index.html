@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" id="screen">
+<input type="button" value="1" onclick="solve('1')">
+<input type="button" value="2" onclick="solve('2')">
+<input type="button" value="3" onclick="solve('3')">
+<input type="button" value="+" onclick="solve('+')">
+<input type="button" value="-" onclick="solve('-')">
+<input type="button" value="/" onclick="">
+<input type="button" value="*" onclick="">
+<input type="button" value="=" onclick="result()">
+<input type="button" value="AC" onclick="clr()">
+<input type="button" value="DEL" onclick="backk()">
+<script>
+
+function solve(value){
+    document.getElementById('screen').value+=value;
+
+
+}
+function result(){
+    var num1=document.getElementById('screen').value;
+    var num2= eval(num1)
+    document.getElementById('screen').value=num2;
+}
+function clr(){
+var a=document.getElementById('screen').value=""
+}
+function backk(){
+    var back=document.getElementById('screen');
+    back.value=back.value.slice(0,-1);
+}
+
+    
+</script>
+
+</body>
+</html>
